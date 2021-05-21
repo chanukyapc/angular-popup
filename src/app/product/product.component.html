@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>{{data.name}} Product</h1>
+<div mat-dialog-content>
+  <!-- <div class="col-sm-12">
+    <div class="col-sm-3">
+      <mat-form-field>
+        <mat-label>Product Name</mat-label>
+        <input matInput [(ngModel)]="data.product_name" MatFormFieldControl>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="Sushi">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-3">
+      <mat-form-field>
+        <mat-label>Product Code</mat-label>
+        <input matInput [(ngModel)]="data.produc_code">
+      </mat-form-field>
+    </div>
+  </div> -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Product Name</mat-label>
+    <input matInput placeholder="Product Name" [(ngModel)]="data.product_name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Product Code</mat-label>
+    <input matInput placeholder="Product Code" [(ngModel)]="data.product_code">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial (click)="AddUpdate()">{{data.name}} Product</button>
+</div>
